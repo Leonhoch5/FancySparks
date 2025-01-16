@@ -31,7 +31,6 @@ class Particle {
         this.radius *= 0.98; 
         this.opacity -= 0.02; 
 
-        
         if (this.radius < 0.5 || this.opacity <= 0) {
             const index = particles.indexOf(this);
             if (index !== -1) particles.splice(index, 1);
@@ -56,7 +55,6 @@ function createParticles(x, y) {
     }
 }
 
-
 canvas.addEventListener('click', (e) => {
     createParticles(e.clientX, e.clientY);
 });
@@ -67,7 +65,6 @@ canvas.addEventListener('mousemove', (e) => {
     }
 });
 
-// Animation loop
 function animate() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; 
     ctx.fillRect(0, 0, canvas.width, canvas.height);
